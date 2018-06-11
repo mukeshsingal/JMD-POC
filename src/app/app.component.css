@@ -1,0 +1,47 @@
+.list-group-item{
+  padding-top: 32px;
+  padding-bottom: 31px;
+}
+
+body, html {
+  height: 100%;
+}
+.parallax {
+  /* The image used */
+  background-image: url("../assets/images/1b.jpg");
+
+  /* Full height */
+  height: 100vh;
+  width: auto;
+  background-color: rgba(255,255,255,0.2);
+  background-blend-mode: lighten;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1.movetxt{
+  -webkit-animation: moving 5s infinite;
+  position: relative;
+  animation: moving 5s infinite;
+}
+@keyframes moving {
+  from {transform: translateY(-200px);}
+  to {transform: translateY(0px);}
+}
+
+.flex-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+
+mat-icon {
+  vertical-align: middle !important;
+  font-size: 20px;
+}

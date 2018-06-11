@@ -1,20 +1,83 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 
+<ng-container >
+  <mat-sidenav-container class="example-container">
+    <mat-sidenav #sidenav mode="side" opened="false" class="example-sidenav"
+                 [fixedInViewport]="true" style="width: 220px">
+      <!--<button mat-mini-fab (click)="sidenav.toggle()" style="width: 30px; height: 30px" class="float-right">-->
+        <!--<mat-icon style="font-size: 15px">close</mat-icon>-->
+      <!--</button>-->
+
+      <ul class="list-group ">
+        <li class="list-group-item list-group-item-action">
+          <mat-icon>home</mat-icon>
+          Home
+        </li>
+        <li class="list-group-item list-group-item-action">
+          <mat-icon>person</mat-icon>
+          About Us
+        </li>
+        <li class="list-group-item list-group-item-action">
+          <mat-icon>restaurant_menu</mat-icon>
+          Services
+        </li>
+        <li class="list-group-item list-group-item-action">
+          <mat-icon>photo_library</mat-icon>
+          Gallary
+        </li>
+        <li class="list-group-item list-group-item-action">
+          <mat-icon>people</mat-icon>
+          Clients
+        </li>
+        <li class="list-group-item list-group-item-action">
+          <mat-icon>location_city</mat-icon>
+          Branches
+        </li>
+        <li class="list-group-item list-group-item-action">
+          <mat-icon>phone_in_talk</mat-icon>
+          Contact
+        </li>
+      </ul>
+
+    </mat-sidenav>
+    <mat-sidenav-content [formGroup]="options" >
+      <navbar (navToggle)="sidenav.toggle()"></navbar>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</ng-container>
+
+<div (click)="sidenav.opened ? sidenav.toggle():''">
+  <div class="parallax">
+    <div class="flex-content">
+      <div class="container align-items-center text-center">
+        <h1 class="movetxt" style="font-size: 50px; text-shadow: 2px 2px black" class=" text-white font-weight-light">
+          Driven by values,
+          delivering on a vision,
+          determined to innovate</h1>
+        <button mat-raised-button class="mt-5" color="accent">Read Story</button>
+      </div>
+    </div>
+  </div>
+
+  <div style="height:auto; font-size: 20px" class="font-weight-light p-5 text-center">
+    <div class="container " style="text-align: justify">
+
+      We at Jai Mata Di Enterprises are doing the work of IRON SLAG PROCESSING, when we first started the work the
+      results
+      ware shocking as we recovered almost 8% metal of the slag weight, thereafter the plan came to our mind to do this
+      work commercially and so the work started.
+
+      In this we process the waste (slag) generated during the melting of iron and steel in any kind of melting furnaces
+      (EAF, EOF, BOF, MBF, INDUCTION, CONVERTOR, Etc.).
+
+      When we first started the work way back in 2002, from then we have came a long way by converting the manual system
+      to atomization and mechanizing the entire process. By doing so we have not only reduced the working cost but has
+      also increased the recovery of metal from slag.
+    </div>
+    <button mat-raised-button class="mt-4">Read More</button>
+  </div>
+  <div class="parallax">
+
+  </div>
+</div>
